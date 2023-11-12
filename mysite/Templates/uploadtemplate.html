@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{%block content%}
+
+<form enctype="multipart/form-data" action="FileSave" method="post">
+
+    <label for="inputtag">
+    <div>
+        <input id='inputtag'type="file" class="form-field" name="docfile" accept=".doc, .docx">
+    </div>
+    </label>
+    <div>
+        <button class="btn" type="submit" name='action' value="fill">Submit</button>
+    </div>
+
+    {% csrf_token %}
+</form>
+
+{%endblock%}

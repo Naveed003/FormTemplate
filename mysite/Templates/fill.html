@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<form action="fill" method="post">
+    {% for name,link in lists%}
+
+    <div>
+        <button class="btn" type="submit" name='action' value={{name}} ><a href={{link}} target="_blank">{{name}}</a></button>
+    </div>
+    {% endfor %}
+
+    {% csrf_token %}
+</form>
+
+{% endblock%}

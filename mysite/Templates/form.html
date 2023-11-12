@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{%block content%}
+<form method="post" action="authenticate">
+
+    <div class="form-field">
+        <input type="number" placeholder="Email / Username" name="emplid" required/>
+    </div>
+
+    <div class="form-field">
+        <input type="password" placeholder="Password" name="pwd" required/></div>
+
+    <div class="form-field">
+        <button class="btn" name='action' type="submit">Log in</button>
+    </div>
+    {% csrf_token %}
+</form>
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{%block content%}
+<form action="homeButtons" method="post">
+    {% csrf_token %}
+    <div>
+        <button class="btn" type="submit" name="action" value="upload">Upload Template</button>
+    </div>
+    <br>
+    <div>
+        <button class="btn" type="submit" name='action' value="fill">Fill Template</button>
+    </div>
+</form>
+{%endblock%}
