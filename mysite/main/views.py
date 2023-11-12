@@ -48,6 +48,7 @@ def Login(request):
         return render(request, 'home.html')
 
     pwd = hashlib.sha256(pwd.encode('utf-8')).hexdigest()
+    pwd=str(dbhash)
     print(type(pwd), type(dbhash))
     if (pwd == str(dbhash)):
         print("sffssg")

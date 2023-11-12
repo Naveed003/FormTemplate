@@ -1,4 +1,4 @@
-from apiclient import discovery
+from googleapiclient import discovery
 from httplib2 import Http
 from oauth2client import client, file, tools
 import os
